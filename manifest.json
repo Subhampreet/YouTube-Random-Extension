@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Random",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon-16.PNG"
+    },
+    "host_permissions": ["http://*/*", "https://*/*"],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "system.cpu",
+        "system.memory",
+        "system.storage",
+        "system.display",
+        "tabs",
+        "scripting"
+    ]
+  }
