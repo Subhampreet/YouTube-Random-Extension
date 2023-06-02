@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "YouTube Random",
+    "name": "YouWatch",
     "version": "1.0",
     "action": {
       "default_popup": "popup.html",
