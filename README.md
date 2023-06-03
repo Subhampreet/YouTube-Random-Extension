@@ -30,7 +30,7 @@ Welcome to the YouWatch - YouTube Music Randomizer Extension! This extension enh
 
 ## Contributing
 
-Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request. Make sure to follow the [contribution guidelines](CONTRIBUTING.md).
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request. Make sure to follow the [contribution guidelines](CONTRIBUTION.md).
 
 ## License
 
