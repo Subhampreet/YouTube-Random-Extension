@@ -9,6 +9,24 @@
         href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400&display=swap"
         rel="stylesheet">
     <style>
+        :root {
+
+            --input-color: #99A3BA;
+            --input-border: #CDD9ED;
+            --input-background: #fff;
+            --input-placeholder: #CBD1DC;
+        
+            --input-border-focus: #CDD9ED;
+        
+            --group-color: var(--input-color);
+            --group-border: var(--input-border);
+            --group-background: #EEF4FF;
+        
+            --group-color-focus: #f8f5f5;
+            --group-border-focus: var(--input-border-focus);
+            --group-background-focus: #0f0f0f;
+        
+        }
         body {
             width: 350px;
             font-family: Arial, sans-serif;
@@ -19,6 +37,35 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        body .main{
+            padding: 10px 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body .main .banner{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        body .main .heading{
+            text-align: left;
+            margin-top: 15px;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        body .main .desc{
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #495674;
         }
 
         .head {
@@ -40,9 +87,11 @@
 
         button {
             padding: 10px 20px;
-            font-size: 18px;
-            background-color: #007bff;
-            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.01rem;
+            background-color: #face0b;
+            color: #0a0808;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -51,6 +100,89 @@
         #video-container {
             margin-top: 20px;
         }
+
+        .form-field {
+            display: block;
+            width: 100%;
+            padding: 7px 16px;
+            line-height: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            border-radius: 6px;
+            -webkit-appearance: none;
+            color: var(--input-color);
+            border: 1px solid var(--input-border);
+            background: var(--input-background);
+            transition: border .3s ease;
+            &::placeholder {
+                color: var(--input-placeholder);
+            }
+            &:focus {
+                outline: none;
+                border-color: var(--input-border-focus);
+            }
+        }
+
+        .form-group {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            display: flex;
+            width: 100%;
+            & > span,
+            .form-field {
+                white-space: nowrap;
+                display: block;
+                &:not(:first-child):not(:last-child) {
+                    border-radius: 0;
+                }
+                &:first-child {
+                    border-radius: 6px 0 0 6px;
+                }
+                &:last-child {
+                    border-radius: 0 6px 6px 0;
+                }
+                &:not(:first-child) {
+                    margin-left: -1px;
+                }
+            }
+            .form-field {
+                position: relative;
+                z-index: 1;
+                flex: 1 1 auto;
+                width: 1%;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            & > span {
+                text-align: center;
+                padding: 8px 12px;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 0.01rem;
+                line-height: 25px;
+                color: var(--group-color);
+                background: var(--group-background);
+                border: 1px solid var(--group-border);
+                transition: background .3s ease, border .3s ease, color .3s ease;
+                color: var(--group-color-focus);
+                background: var(--group-background-focus);
+                /*border-color: var(--group-border-focus);*/
+                border-color: #0a0808;
+            }           
+        }
+
+        .form-group span:hover{
+            cursor: pointer;
+            font-weight: 600;
+            letter-spacing: 0.02rem;
+            color: #111;
+            background: #eeb90a;
+            border-color: #eeb90a;
+            transition: background .3s ease, border .3s ease, color .3s ease;              
+        }
+        
     </style>
 </head>
 
@@ -59,10 +191,20 @@
         <img src="./icon-main.PNG">
         <h1>youwatch</h1>
     </div>
-    <label for="genre">Enter a genre:</label>
-    <input type="text" id="genre" />
-    <button id="fetchBtn">Fetch Random Video</button>
-    <script src="./popup.js"></script>
+    <div class="main">
+        <img class="banner" src="./banner.PNG">
+        <div class="heading">Vibe on your fav' music now on YouWatch</div>
+        <div class="desc">Elevate Your Music Experience: Dive into a World of Serendipity with our YouTube Music Randomizer Extension!</div>
+        <div class="form-group">
+            <span id="fetchBtn">music</span>
+            <input class="form-field" type="text" placeholder="genre" id="genre">
+        </div>
+
+        <!-- <label for="genre">Enter a genre:</label> -->
+        <!-- <input type="text" id="genre" /> -->
+        <!-- <button id="fetchBtn">Play Music</button> -->
+    </div>   
+    <script type="module" src="./popup.js"></script>
 </body>
 
 </html>
