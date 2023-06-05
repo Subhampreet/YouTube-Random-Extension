@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Welcome to the YouWatch - YouTube Music Randomizer Extension! This extension enhances your music exploration experience by allowing you to discover random music videos on YouTube.
+Welcome to the YouWatch - YouTube Music Randomizer Extension! This extension enhances your music exploration experience by allowing you to discover random music videos on YouTube ⚡.
 
 ![image](https://github.com/Subhampreet/YouTube-Random-Extension/assets/61475220/1053470f-f475-4b6b-80e7-51aedfdd13e7)
 
