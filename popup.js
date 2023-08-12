@@ -3,7 +3,7 @@ import config from './config.json' assert { type: "json" };
 
 // Function to fetch a random YouTube video based on a given genre
 async function getRandomVideo(genre) {
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${config.youtubeApiKey}&part=snippet&maxResults=1&q=${genre} music&maxResults=50`);
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${config.youtubeApiKey}&part=snippet&q=${genre} music&maxResults=50`);
     const data = await response.json();
     
     if (data.items && data.items.length > 0) {
